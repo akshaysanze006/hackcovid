@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_main_log"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_log_agora" />
+
+    <ImageView
+        android:id="@+id/iv_main_log_text"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_main_log"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/main_log_text_agora" />
+
+    <EditText
+        android:id="@+id/et_channel_name"
+        style="@style/text_edit_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/et_inject_url"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:hint="@string/hint_channel_name"
+        android:text="@string/text_default_channel"
+        android:textColor="@color/agora_black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/et_inject_url"
+        style="@style/text_edit_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_main_login"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/hint_stream_url"
+        android:text="@string/text_default_stream_for_injection"
+        android:textColor="@color/agora_black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_main_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="36dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/main_btn_style"
+        android:onClick="onStartClicked"
+        android:text="Start"
+        android:textColor="@color/agora_white" />
+</RelativeLayout>
